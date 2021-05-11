@@ -21,6 +21,15 @@ docker build -t buzzer .
 docker run -p 8090:8090 buzzer
 ```
 
+#For Azure Container registry
+docker build -t buzzer .
+docker run -p 8090:8090 buzzer
+docker login reycontainer222.azurecr.io
+docker push reycontainer222.azurecr.io/buzzer:latest
+
+then use "Web App for container" for hosting container app
+
+********
 Open http://localhost:8090 in your browser to start!
 
 ## How to use
