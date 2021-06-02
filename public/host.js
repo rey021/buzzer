@@ -7,6 +7,7 @@ socket.on('active', (numberActive) => {
   active.innerText = `${numberActive} joined`
 })
 
+        
 socket.on('buzzes', (buzzes) => {
   buzzList.innerHTML = buzzes
     .map(buzz => {
@@ -14,7 +15,7 @@ socket.on('buzzes', (buzzes) => {
       return { name: p[0], team: p[1] }
     })
     .map(user => `<li>${user.name}</li>`)
-    .join('')
+    .join('');
 })
 
 clear.addEventListener('click', () => {

@@ -35,9 +35,13 @@ form.addEventListener('submit', (e) => {
   body.classList.add('buzzer-mode')
 })
 
+var audio = new Audio("buzzersound.mp3");
+
 buzzer.addEventListener('click', (e) => {
-  socket.emit('buzz', user)
+  socket.emit('buzz', user);
+  audio.play()
 })
+
 
 editInfo.addEventListener('click', () => {
   joined.classList.add('hidden')

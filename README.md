@@ -22,9 +22,9 @@ docker run -p 8090:8090 buzzer
 ```
 
 #For Azure Container registry
-docker build -t buzzer .
-docker run -p 8090:8090 buzzer
-docker login reycontainer222.azurecr.io
+docker build -t reycontainer222.azurecr.io/buzzer .
+docker run -p 8090:8090 reycontainer222.azurecr.io/buzzer
+az acr login -n reycontainer222
 docker push reycontainer222.azurecr.io/buzzer:latest
 
 then use "Web App for container" for hosting container app
